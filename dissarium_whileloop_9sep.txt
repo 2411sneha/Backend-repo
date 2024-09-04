@@ -1,0 +1,38 @@
+import java.util.*;
+public class java1
+{
+	public static void main(String[] args)
+	{
+		int n,n1,f1=1,sum=0,p,num=0,digits=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number =");
+		n=sc.nextInt();
+		num=n;
+		p=n;
+		while(num>0)
+		{
+			digits++;
+		num = num/10;
+		}
+		while(n>0)
+		{
+			n1=n%10;
+			n=n/10;
+			f1=1;
+			for(int i=1;i<=digits;i++)
+			{
+				f1=f1*n1;
+			}
+			digits--;
+			sum=sum+f1;
+		}
+		if(p==sum)
+		{
+			System.out.println("Dissarium number");
+		}
+		else
+		{
+			System.out.println("Not dissarium number");
+		}
+	}
+}

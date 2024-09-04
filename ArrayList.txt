@@ -1,0 +1,553 @@
+ Array[]
+-It is collection of homogeneous(same) elements
+-It is also called as subscripted variable
+-It is used to store multiple values in single variable name
+-index start with 0 & ends with arraysize-1
+datatype var[]=new datatype[size];
+int a[ ]=new int[5];
+a
+10  2 30 4 50
+ 0    1  2  3  4  
+a[0]=10
+a[3]=40
+1)calculate sum & average of an array elements
+
+import java.util.*;
+ 
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,sum=0;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int []a=new int[n];//array creation		
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();	
+			sum=sum+a[i];
+		}		
+		System.out.println("\n\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}		
+	   double avg=sum/n;
+	 System.out.println("\nSum="+sum+"\nAverage="+avg);
+}
+}
+n=4 sum=0
+i=0(0<4)T
+a[0]=45
+sum=0+45=45
+i=1(1<4)T
+a[1]=50
+sum=45+50=95
+i=2(2<4)T
+a[2]=100
+sum=95+100=195
+...
+
+
+
+2)find max & min from an array
+
+import java.util.Scanner;
+import java.util.*;  
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,max,min;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int a[]=new int[n];//array creation		
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();	
+		
+		}		
+		System.out.println("\n\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}		
+	max=min=a[0];
+	for(i=1;i<n;i++)
+	{
+		if(a[i]>max)
+		{
+			max=a[i];
+			
+		}
+		if(a[i]<min)
+		{
+			min=a[i];
+		}
+	}
+	  System.out.println("\n\n max="+max);
+	  System.out.println("\n\nMin="+min);							
+	}
+}
+3Accept array from user & print prime numbers from array
+
+import java.util.Scanner;
+
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,div,n1,j;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int a[]=new int[n];//array creation		
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();	
+		
+		}		
+		System.out.println("\n\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}		
+		System.out.println("\n\nPrime elements are");
+		for(i=0;i<n;i++)
+		{
+			n1=a[i];
+			div=0;
+			for(j=2;j<=(n1/2);j++)
+			{
+				if(n1%j==0)
+				{
+					div=1;
+					break;
+				}
+			}
+			if(div==0)
+				System.out.print(a[i]+"\t");
+					
+		}
+		}
+}
+
+4)Accept array from user & print perfect numbers from array
+import java.util.Scanner;
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,div,n1,j;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int a[]=new int[n];//array creation		
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();	
+		
+		}		
+		System.out.println("\n\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}		
+		System.out.println("\n\nPrime elements are");
+		for(i=0;i<n;i++)
+		{
+
+			n1=a[i];
+			sum=0;
+			for(j=1;j<=(n1/2);j++)
+			{
+				if(n1%j==0)
+				{
+					sum=sum+j;
+				}
+			}
+			if(n1==sum)
+				System.out.print(a[i]+"\t");		
+		}
+		}
+}
+
+5)Accept array from user & print pronic numbers from array
+		for(i=0;i<n;i++)
+		{
+
+			n1=a[i];
+			sum=0;
+			for(j=1;j<=(n1/2);j++)
+			{
+				if(n1==(j*(j+1)))
+				{
+					sum=1;
+					break;
+				}
+			}
+			if(sum==1)
+				System.out.print(a[i]+"\t");		
+		}
+6)Accept array from user & print palindrom numbers from array
+		for(i=0;i<n;i++)
+		{
+
+			n1=a[i];
+			sum=0;
+			while(n1>0)
+			{
+				g=n1%10;
+				n1=n1/10;
+				sum=(sum*10)+g;
+			}
+			if(sum==a[i])
+				System.out.print(a[i]+"\t");		
+		}
+7)Accept array from user & print strong numbers from array
+8)Accept array from user & print magic numbers from array
+9)Disarium
+
+
+ 
+12)even number & odd number
+System.out.println("Even");
+for(i=0;i<n;i++)
+	{
+	if(a[i]%2==0)
+	SOP(""+a[i]);
+	}
+System.out.println("odd");
+for(i=0;i<n;i++)
+	{
+	if(a[i]%2==1)
+	SOP(""+a[i]);
+	}
+
+13)Accept array from user & print alteranate element
+i/p 10 20 30 40 50
+
+o/p 10 30 50
+
+
+System.out.println("\n\nAlterate Array elements are");
+		for(i=0;i<n;i=i+2)
+		{
+			System.out.print(a[i]+"\t");
+		}	
+14)array size even(4)
+ a  0  1  2  3
+i/p 10 20 30 40 
+
+
+
+o/p 20 10 40 30
+    0  1   2  3
+
+import java.util.Scanner;
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,temp;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int a[]=new int[n];//array creation		
+			
+
+if(n%2==0)
+{
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();	
+		
+		}		
+		System.out.println("\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}	
+for(i=0;i<n;i=i+2)
+{
+temp=a[i];//temp=10   temp=30
+a[i]=a[i+1];//a[0]=20 a[2]=40
+a[i+1]=temp;//a[1]=10 a[3]=30
+}
+	for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}	
+}
+else
+{
+System.out.println("\nArray size invalid");
+}
+		
+}
+15)Searching element from an array(Linear Search)
+i/p  10 20 30 40
+key=30
+element found or not
+import java.util.*;
+public class Array_14 {
+	public static void main(String[] args){
+		int i,n,num,flag=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter size of array");
+		n=sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("Enter "+n+" elements");
+		for(i=0; i<n; i++){
+			a[i]=sc.nextInt();
+		}
+		System.out.println("The elements are");
+		for(i=0;i<n; i++){
+			System.out.print("\t"+a[i]);
+		}
+		System.out.println("\nEnter an element which u want to search?");
+		num=sc.nextInt();
+		for(i=0; i<n; i++)
+		{
+			
+			if(a[i]==num)
+			{
+				flag=1;
+				System.out.println("Element found AT POSITION "+(i+1));
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			
+		
+			System.out.println("Element not found");
+		}
+	}
+}
+16)Binary Search
+
+17)print array in reverse order
+import java.util.Scanner;
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int a[]=new int[n];//array creation		
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();			
+		}		
+		System.out.println("\n\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(" "+a[i]);
+		}
+		System.out.println("\n\nArray reverse elements are");
+		for(i=n-1;i>=0;i--)
+		{
+			System.out.print(" "+a[i]);
+		}
+		}
+                             }
+
+18)Array sort(Java Program to sort the elements of an array in ascending order.)
+
+import java.util.Scanner;
+import java.util.*;  
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,n1,div=0,j;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int a[]=new int[n];//array creation		
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		
+		}		
+		System.out.println("\n\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}		
+		//Arrays.sort(a);
+		int temp; 
+		for ( i = 0; i < n-1; i++)   //passes selection sort
+		        {  
+		            for ( j = i+1; j < n; j++)  //inner iteration 
+		            {  
+		                if (a[i] > a[j])   //swap
+		                {  
+		                    temp = a[i];  
+		                    a[i] = a[j];  
+		                    a[j] = temp;  
+		                }  
+		            }  }		        }   		
+		
+		System.out.println("\n\nSorted Array elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}
+                             
+	System.out.println("2 nd highest "+a[n-2]);
+	}
+
+}
+
+
+19) Java Program to sort the elements of an array in descending order>(<)
+20) Java Program to Find 3rd Largest Number in an arraySOP("Third highest"+a[n-3])
+21) Java Program to Find 2nd Largest Number in an array n-2  System.out.println("2 nd highest "+a[n-2]);
+22) Java Program to Find Largest Number in an array n-1
+23) Java to Program Find 2nd Smallest Number in an array   a[1]
+24)//bubble
+		for ( i = 1; i < n; i++)   //passes bubble sort
+		        {  
+		            for ( j = 0; j < n-i; j++)  //inner iteration 
+		            {  
+		                if (a[j] > a[j+1])   //swap
+		                {  
+		                    temp = a[j];  
+		                    a[j] = a[j+1];  
+		                    a[j+1] = temp;  
+		                }  
+		            }  
+		        } 
+25)Insertion sort
+26)Quick Sort 
+
+27)Java Program to copy all elements of one array into another array b[i]=a[i]
+import java.util.Scanner;
+import java.util.*;  
+public class ArrayDemo 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,n1,div=0,j;		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter array size");
+		n=sc.nextInt();		
+		int a[]=new int[n];//array creation
+		int b[]=new int[n];//array creation		
+		System.out.println("Enter "+ n +" Elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+			b[i]=a[i];
+		
+		}		
+		System.out.println("\n\nArray elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(a[i]+"\t");
+		}
+		System.out.println("\n\nCopied Array elements are");
+		for(i=0;i<n;i++)
+		{
+			System.out.print(b[i]+"\t");
+		}	
+}
+}	
+28) Java Program to find the frequency of each element in the array
+2 10 5 2 1 5
+2=2
+10=1
+5=2
+1=1
+
+29) Java Program to left rotate the elements of an array
+0  1  2  3 4
+10 12 3 5 6 
+3 5 6 10 12
+for(i=2;i<n;i++)
+{
+sop(""+a[i]);
+}
+sop(""+a[0]);
+sop(""+a[1]);
+29) Java Program to right rotate the elements of an array
+10 2 3 5 6 
+5 6 10 2 3
+
+30) Java Program to print the duplicate elements of an array
+2 10 5 2 1 5
+o/p 2 5
+31)Java Program to Remove Duplicate Element in an array
+32) Java Program to print the elements of an array present on even position i=1 i=i+2
+for(i=1;i<n;i=i+2)
+{
+sop(""+a[i]);
+}
+33) Java Program to print the elements of an array present on odd position i=0 i=i+2
+34)Java Program to sum of  the even elements of an array.
+
+		for(i=0;i<n;i++)
+		{	if(a[i]%2==0)
+			sum=sum+a[i];			
+		}
+
+35) Write a program to find the sum of odd no from an array
+
+
+36)Write a program to show  perfect square numbers?ex.9=3*3    sqrt(n1)
+for(i=0;i<n;i++)
+{
+int number=a[i];
+int sqrt = (int) Math.sqrt(number);
+        if(sqrt*sqrt == number) 
+{
+            System.out.println(number+" is a perfect square number!");
+      
+        }
+}
+
+37)java  Program to Separate Zeros from the given Array elements.
+i/p 10 67 0 678 0 32
+o/p 10 67 678 32
+
+38))java  Program to remove  number form array which contains Zeros  elements.
+i/p 10 67 203 678 450 32
+o/p  67 678 32
+
+
+39)Accept n subjects mark from user store into array & calculate reuslt having 
+ATKT Fail also
+40).Write a Java program to find second highest no without sorting   
+Arr[]={4,5,6,1,2,3,6}
+
+Output=second highest number is 6at index of Arr[2]
+
+
+
+41)Write Java program unsorted array ,find the sum of pair component.
+Arr []={50,30,10,20,40,60}
+i/p 70
+
+Output=sum of pair=Pair(50,20).
+42)
+Merging of 2 arrays
+43)
+Intersection of 2 arrays
+44)union
+45)Write a Java program to remove a specific element from an array.
+46)Write a Java program to insert an element (specific position) into an array.
+https://www.knowprogram.com/java/array-programs-in-java/
+https://www.w3resource.com/java-exercises/array/index.php
