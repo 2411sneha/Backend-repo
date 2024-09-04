@@ -1,0 +1,849 @@
+Control Structure
+A)Conditional Statement
+1)if
+2)if-else
+3)else-if ladder
+4)Nested If-else
+B)Iterative Statement
+1)for
+2)while
+3)do-while
+C)Selection Statement
+1)switch
+D)Special statement
+1)break
+2)continue
+3)goto
+
+
+A)
+Conditional Statements
+1)
+if(condition)
+{
+//code                 //1 possiblity
+}
+
+2)
+if(condition)
+{
+//code
+}
+else                       //2 possiblity
+{
+//code
+}
+
+3)
+else-if ladder
+if(condition)
+{
+//code
+}
+else if(condition)
+{
+//code                                more than 2 possiblity
+}
+else if(condition)
+{
+//code
+}
+else if(condition)
+{
+//code
+}
+.
+.
+.
+.
+.
+else
+{
+//code
+}
+
+Condition
+Relational operator
+<,>,>=,<=,==,!=
+Logical oprator
+&&,||,!    
+A   B  A&&B(*)    A||B (+)   !A            T(1)  F(0)
+T   T     T	    T              F
+T   F     F	    T	          F
+F  T      F         T              T
+F  F      F         F              T
+
+1)even & odd
+1000 -even   =0
+7777-odd     =1    
+
+/=quotient             17/2=8
+%=remainder      17%2=1
+
+a=5     assign
+a==5   equality
+if-else
+%
+==
+1) even odd
+import java.util.*;
+public class Main
+{
+
+	public static void main(String[] args) 
+	{
+		int n;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter 1 number");
+		n=sc.nextInt();
+		if(n%2==0) 
+		{
+			System.out.println(n+" is Even");
+
+		}
+		else
+		{
+			System.out.println(n+" is Odd");
+		}
+		
+		
+	}	
+
+}
+2)Number is divisible by 7 or not
+3)Leap year or not(%4)
+4)Number is divisible by 5 and 7
+import java.lang.*;
+import java.util.*;
+public class Or_Demo
+{
+
+	public static void main(String[] args) 
+	{
+		int n;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter 1 numbers");//System.out.println() cout<<
+		n=sc.nextInt();//scanf()
+		if(n%5==0 && n%7==0) 
+		{
+			System.out.println(n+" is divisible by 5 and 7");
+
+		}
+		else
+		{
+			System.out.println(n+" is not divisible by 5 or 7");
+		}				
+	}	
+}
+
+5)divisible by 5 or 7
+6)number positive or negative
+10
+-345
+0
+
+import java.util.*;
+public class Pos_neg {
+
+	public static void main(String[] args) 
+	{
+		int n;
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter 1  number");
+		n=sc.nextInt();
+		if(n>0)
+		{
+		 System.out.println(n+" is positive");
+
+		}
+		else if(n<0)
+		{
+
+			 System.out.println(n+" is negative");
+
+		}
+		else 
+
+		{
+			System.out.println(n+" is Zero");
+
+		}
+		
+
+	}
+
+}
+
+
+7)max 2 number
+a    b
+10   9       
+9   56       
+167  167  
+{
+int a,b;
+a=
+b=
+
+if(a>b)
+{
+SOP("Max="+a);
+}
+else if(b>a)
+{
+SOP("Max="+b);
+}
+else
+{
+SOP("Both are equals");
+}
+
+}
+8)Minimum from 2 numbers
+
+
+
+9)first no is between range of Second no and third no
+20  10  30 Yes      20 30 10 
+a   b    c
+10   45   20 not
+2 possiblity(if-else)
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int a,b,c;
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter 3  number");
+		a=sc.nextInt();
+		b=sc.nextInt();
+		c=sc.nextInt();
+		if((a>b&&a<c))
+		{
+		System.out.println(a +" is between "+ b +" and "+c);
+		}
+		else
+		{
+		System.out.println(a +" is not between"+ b +" and "+c);
+		}
+	}
+}
+10)second no is between first no and third no
+10 20 30
+a  b   c
+
+11)Third no is between first no and second no
+a    b   c
+10   30 20
+
+12)Accept selling price & cost price from user and display
+ profit amt or loss amt or none
+( loss or profit in percentage)
+i/p cp,sp
+o/p profit or loss or none
+100
+150
+{
+double cp,sp,amt,disc;
+Scanner sc=new Scanner (System.in);
+System.out.println("Enter  cp & sp");
+cp=sc.nextDouble();
+sp=sc.nextDouble();
+if(cp>sp)
+{
+amt=cp-sp;
+disc=(amt/cp)*100;
+System.out.println("loss="+amt+"Percentage="+disc);
+}
+else  if(sp>cp)
+{
+amt=sp-cp;
+disc=(amt/cp)*100;
+System.out.println("profit="+amt+"Percentage="+disc);
+}
+else
+{
+System.out.println("no profit no loss");
+}
+}
+
+
+13.Voting eligiblity
+i/p age
+o/p eligible or not
+
+14)accept balance amt & withdrawl amount if  withdrawl amount is greater than balance amt then 
+display msg other wise display remaining balance after withdrawl amt.
+i/p {
+double bamt,wamt;
+Sc
+sop
+bamt
+wamt
+if(bamt<wamt)
+insuff
+else
+SOP("Balance="+(bamt-wamt))
+
+}
+
+15)Accept no of vaccine taken & print its eligiblity for interview or not
+(Vaccine no=2 then eligible)
+
+
+16)Accept atm pin from user check wheter it is valid or not
+
+17)check whether no is 1 digit or 2 digit or .........
+if(n>=0 && n<=9)
+System.out.println("one digit");
+else if(n>=10 && n<=99)
+SOP("two digit");
+
+18)Write a program to read three sides a,b,c of a triangle and print the type of the triangle? 
+Right angled triangle(a*a)+(b*b)==(c*c)||(b*b)+(c*c)==(a*a)|| (c*c)+(a*a)==(b*b)
+ Equilateral triangle(a==b) && (b==c)
+Isosceles triangle(a==b) || (b==c) || (c==a) Scalene(a!=b && b!=c && c!=a)
+
+{
+a=
+b=
+c=
+
+if((a*a)+(b*b)==(c*c)||(b*b)+(c*c)==(a*a)|| (c*c)+(a*a)==(b*b))
+sop(":Right angled triangle");
+else if((a==b) && (b==c))
+sop("Equilateral triangle");
+else if((a==b) || (b==c) || (c==a))
+sop("Isosceles triangle");
+}
+
+19)Accept x & y point from user & print its quadrant
+1,2
+-5,6
+-8,-4
+6,-9
+
+20)Accept 3 sub marks from users  and display its total,per & class
+i/p m1,m2,m3
+o/p total,per
+total=m1+m2+m3
+per=total/3;
+SOP(total+per);
+if(per>=70 && per<=100)
+SOP("dist");
+else if(per>=60&&per<70)
+first
+ 55 60
+higher second
+ 50 55
+second
+40  50
+pass
+else
+fail
+
+import java.util.Scanner;
+public class per
+{
+	public  static  void main(String args[])
+	{		
+		int m1,m2,m3,total;
+		double per;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 3");
+		m1=sc.nextInt();
+		m2=sc.nextInt();
+		m3=sc.nextInt();		
+		total=m1+m2+m3;
+		per=total/3;
+		System.out.println("Total="+total+"\nPer="+per);
+		if(per>=70 && per<=100)
+		{
+		System.out.println("Distinction");
+		}
+		else if(per>=60 && per<70)  
+		{
+			System.out.println(" First class");
+		}
+		else if(per>=55 && per<60)  
+		{
+			System.out.println(" Higher");
+		}
+		else if(per>=50 && per<55)  
+		{
+			System.out.println(" Second");
+		}
+		else if(per>=40 && per<50)  
+		{
+			System.out.println(" Pass");
+		}
+		else
+		{
+		System.out.println("Fail");	
+		}		
+	}
+}
+
+
+
+21)Accept 3 numbers from users & print maximum no from 3 nos  
+a   b  c
+10 2 3
+2 10 3
+2 3 10
+10 10 2
+10 2 10
+2   10 10
+10 10 10 
+
+import java.util.*;
+public class Max3 
+{
+	public static void main(String[] args) 
+	{
+		int a,b,c;
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter 3  number");
+		a=sc.nextInt();
+		b=sc.nextInt();
+		c=sc.nextInt();
+		if(a>b&&a>c)
+		{
+		System.out.println(a +" is max");
+		}
+		else if(b>a&&b>c)
+		{
+		System.out.println(b +" is max");
+		}
+		else if(c>a && c>b)
+		{
+			System.out.println(c +" is max");
+		}
+		else if(a==b && a>c)
+		{
+			System.out.println(a +" and "+b+" is max & equals");
+		}
+		else if(a==c && c>b)
+		{
+			System.out.println(a +" and "+c+" is max & equals");
+		}
+		else if(c==b && b>a)
+		{
+			System.out.println(c +" and "+b+" is max & equals");
+		}
+		else
+		{
+			System.out.println("All are equals");
+		}
+		
+	}
+
+}		
+
+22)Minimum from 3 numbers
+22.1)Maximum from 4 number
+
+23.Light bill
+ip units
+
+e)
+{
+ int unit;
+double UC,ElectricityCharge = 0.0,EC,total;
+Sca
+SOP
+unit=sc.nextInt();
+if(unit<=100)
+       {
+    	   ElectricityCharge =unit*3.44;
+    	  System.out.println("Electricity charge :"+ElectricityCharge);
+       }
+       else if(unit>=101 &&unit<=300 )
+       {
+    	   ElectricityCharge=unit*7.34;
+    	  System.out.println("Electricity charge :"+ElectricityCharge);
+       }
+       else if(unit>=301 && unit<=500)
+       {
+    	   ElectricityCharge=unit*10.36;
+    	 System.out.println("Electricity charge :"+ElectricityCharge);
+       }
+       else if(unit>=501 && unit<=1000)
+       {
+    	   ElectricityCharge=unit*11.82;
+    	   
+    	 System.out.println("Electricity charge :"+ElectricityCharge);
+       }
+       else
+       {
+    	   ElectricityCharge=unit*11.92;
+    	  System.out.println("Electricity charge :"+ElectricityCharge);
+       }
+           UC=unit*1.38;
+           EC=((102+ElectricityCharge+UC)*0.16);
+           total=102+ElectricityCharge+UC+EC;
+          System.out.println("Unit Charge="+UC);
+          System.out.println("tax="+EC);
+          System.out.println("Total bill="+total);
+     
+}
+}
+25)
+i/p amt
+o/p
+amt<10000 no disc
+amt>=10000 && amt<20000  5% disc
+amt>=20000 && amt<50000 7% disc
+amt>=50000 10% disc
+import java.util.*;
+public class Amt{
+	public static void main(String[] args) 
+	{
+		double amt,disc,total;
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter amount");
+		amt=sc.nextDouble();
+		if(amt<10000)
+		{
+			System.out.println("No disc"); 
+		 }		
+		else if(amt>=10000 && amt<20000)
+		{
+			disc=amt*0.05;
+			total=amt-disc;
+			System.out.println("Disc amt="+disc +" Total= "+total);
+		}
+		else if(amt>=20000 && amt<50000)
+		{
+			disc=amt*0.07;
+			total=amt-disc;
+			System.out.println("Disc amt="+disc +" Total= "+total);}
+		else 
+		{
+			disc=amt*0.10;
+			total=amt-disc;
+			System.out.println("Disc amt="+disc +" Total= "+total);
+		}}}
+26)Accept bs from user & display its tax
+bs<150000
+no tax
+bs>=150000 & bs<300000
+5% tax on bs
+bs>=300000
+7% tax on bs
+27)
+Write a program to calculate the monthly income of a person using the following 
+commission schedule:(use ‘if-else-if’ statement). Monthly sales income.
+i/p Sales 
+
+>=Rs. 50,000Rs. 375+16% Sales.
+<Rs. 50,000 but>=Rs. 40,000 Rs. 370+14% Sales
+<Rs. 40,000 but>=Rs. 30,000 Rs. 325+12% Sales
+<Rs. 30,000 but>=Rs. 20,000 Rs. 300+9% Sales
+<Rs. 20,000 but>=Rs. 10,000 Rs. 250+5% Sales                  sales>=10000 && sales<20000
+<Rs. 10,000/- Rs. 200+3% Sales
+
+import java.util.Scanner;
+public class Disc {
+
+	public static void main(String[] args) {
+		double amt,comm;
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter amount");
+		amt=sc.nextDouble();
+		
+		if(amt<5000)
+		{
+			
+			System.out.println("no commision");
+		}
+		else if(amt<10000 && amt>=5000)
+		{
+			comm=200+amt*(0.03);
+			System.out.println("commision =" +comm);
+		}
+		else if(amt>=10000 && amt<20000)
+		{
+
+			comm=250+amt*(0.05);
+			System.out.println("commision =" +comm);
+		}
+		else if(amt>=20000 && amt<30000)
+		{
+
+			comm=300+amt*(0.09);
+			System.out.println("commision =" +comm);
+		}
+		else if(amt>=30000 && amt<40000)
+		{
+
+			comm=325+amt*(0.12);
+			System.out.println("commision =" +comm);
+		}
+		else if(amt>=40000 && amt<50000)
+		{
+
+			comm=370+amt*(0.14);
+			System.out.println("commision =" +comm);
+		}
+		else
+		{
+
+			comm=375+amt*(0.16);
+			System.out.println("commision =" +comm);
+		}
+
+	}
+
+}
+28)accept loanamount from user if 
+loanamount<100000 then interest rate =9%
+loanamount>=100000 and loanamount<1000000  then interest rate =7%
+loanamount>=1000000 and loanamount<10000000  then interest rate =5%
+calculate interest amount for 5 year of duration
+si=n*r*i/100
+calculate per month EMI 
+
+
+
+
+{
+double n,emi,si;
+n=
+
+if(n<100000)
+{
+si=(n*0.09*5)/100;
+}
+else if(n>=100000 && n<1000000)
+{
+si=(n*0.07*5)/100;
+}
+elseif(n>=1000000 && n<10000000)
+{
+si=(n*0.05*5)/100;
+}
+emi=(n+si)/(12*5);
+SOP(si);
+SOP(emi);
+}
+29)Display character is vowel or not
+import java.util.Scanner;
+public class CharDemo
+{
+public static void main(String[] args) 
+	{
+		char ch;
+		
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter character");
+		
+		ch=sc.next().charAt(0);
+		if(ch=='a'|| ch=='A'||ch=='e'||ch=='E'||ch=='i'||........)
+		{
+			System.out.println(ch + " is vowel");
+		}
+		else
+		{
+			System.out.println(ch + " is not vowel");
+		}		
+	}
+}
+
+
+30)Display character is alphabate or not
+import java.util.Scanner;
+public class CharDemo
+{
+public static void main(String[] args) 
+	{
+		char ch;
+		
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter character");
+		
+		ch=sc.next().charAt(0);
+		if((ch>='a' && ch<='z')||(ch>='A' && ch<='Z'))
+		{
+			System.out.println(ch + " is alphabate");
+		}
+		else
+		{
+			System.out.println(ch + " is not alphabate");
+		}		
+	}
+}
+31)Accpet characher from user check whether it is capital or small letter or anything else
+32)Display character is a digit or not
+33)Accpet characher from user check whether it is special or not
+
+
+
+
+	
+4)Nested If-else
+35)Max from 3 numbers
+a     b    c
+10   9   62
+
+if(condition)        if(a>b)  T          
+{     	          {
+if(condition)        if(a>c)T
+{ 	         {					
+//code		SOP("Max="+a);
+}	         }
+else                   else
+{                         {
+//code                        SOP("MAx="+c);
+}                        }
+
+}                        }//if complete 
+else                  else
+
+{	       {
+if(condition)       if(b>c)
+{                          {
+//code                     SOP("Max="+b);
+}                          }
+else                   else
+{                           {
+//code                     SOP("Max="+c);
+}	           }
+}	        }
+
+
+36)min 3 number using nested if-else
+37)Max from 4 number
+
+
+
+
+38)
+blood donation
+{
+double wt,age,hb;
+wt=
+age=
+hb=
+if(wt>=55)
+{
+if(age>=18)
+{
+if(hb>=12)
+{
+SOP("eligible for blood donation");
+}
+else
+{
+nt hb
+}
+
+}
+else
+{
+wt valid but age is not valid
+}
+
+}
+else
+{
+wt is not valid
+}
+
+}
+
+39))Accept 10 th,12th & Last year marks & if all years having per >=60 then print eligible for aptitude
+
+
+40)Accept 3 sub marks from user display user's class or ATKT or fail
+
+int m1,m2,m3;
+Sc
+SOp
+m1=
+m2=
+m3=
+total=m1+m2+m3;
+per=total/3;
+SOP(total)
+SOP(per)
+if(m1>=40 && m2>=40 && m3>=40)
+{
+      if(per>=70 && per<=100)
+		{
+		System.out.println("Distinction");
+		}
+		else if(per>=60 && per<70)  
+		{
+			System.out.println(" First");
+		}
+		else if(per>=55 && per<60)  
+		{
+			System.out.println(" Higher");
+		}
+		else if(per>=50 && per<55)  
+		{
+			System.out.println(" Second");
+		}
+		else if(per>=40 && per<50)  
+		{
+			System.out.println(" Pass");
+		}                       
+}
+else if(m1<40 && m2<40 && m3<40)
+{
+fail
+}
+else
+{
+ATKT FAil
+}
+
+41)
+divisible by 5 & 7
+if(n%5==0)
+{
+if(n%7==0)
+{
+divisible by 5 & 7
+}
+else
+{
+not divisible by 7 but divisible by 5
+}
+}
+else
+{
+
+if(n%7==0)
+{
+not divisible by 5 but div by  7
+}
+else
+{
+not divisible by 7 and  5
+}
+}
+
+
+
+
+
+43)
+Conditional Operator(?:)
+it is also called as ternary operator.
+{
+int a,b,c;
+Sc
+SOP
+a=
+b=
+
+c=(a>b)?a:b;
+SOP("MAx="+c);
+}
+
+44)
+Max from 3 numbers using Conditional operator
+
+5prg
