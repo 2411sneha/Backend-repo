@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.Scanner;
-public class sep_zero
+public class sep_zero_9sep
 {
 	public static void main (String[] args)
 	{
