@@ -1,5 +1,5 @@
 import java.util.*;
-import java.util.Scanner;
+import java.lang.String;
 
 public class factarrobj_18sep
 {
